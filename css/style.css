@@ -8,7 +8,6 @@
   -moz-osx-font-smoothing: grayscale;
   --ink: #262626;
   --muted: #606060;
-  --accent: #ffffff;
   --soft: #f8f8f8;
 }
 
@@ -69,12 +68,6 @@ h1 {
   gap: clamp(40px, 8vw, 104px);
 }
 
-.trust-artwork {
-  display: grid;
-  min-height: 260px;
-  place-items: center;
-}
-
 .trust-artwork img {
   width: min(100%, 500px);
   height: auto;
@@ -89,8 +82,6 @@ h1 {
 }
 
 .trust-points li {
-  position: relative;
-  padding: 4px 0 4px 38px;
   color: var(--ink);
   font-size: 1rem;
   line-height: 1.65;
@@ -112,8 +103,17 @@ h1 {
   font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-.partners img {
-  width: min(550px, 100%);
+.partner-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 4vw, 40px);
+  width: 100%;
+}
+
+.partner-logos img {
+  width: clamp(70px, 12vw, 100px);
   height: auto;
   object-fit: contain;
 }
@@ -138,10 +138,6 @@ h1 {
   .trust-content {
     grid-template-columns: 1fr;
     gap: 24px;
-  }
-
-  .trust-artwork {
-    min-height: 0;
   }
 
   .trust-artwork img {
